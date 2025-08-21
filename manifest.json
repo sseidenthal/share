@@ -1,7 +1,7 @@
 {
   "name": "Web Share Target Demo",
   "short_name": "Share Demo",
-  "start_url": "/share/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
@@ -18,7 +18,7 @@
     }
   ],
   "share_target": {
-    "action": "/share/index.html",
+    "action": "index.html",
     "method": "GET",
     "enctype": "application/x-www-form-urlencoded",
     "params": {
@@ -28,4 +28,5 @@
     }
   }
 }
+
 
