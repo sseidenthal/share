@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Share Target</title>
-    <link rel="manifest" href="/manifest.json">
+    <title>Web Share Target</title>
+    <link rel="manifest" href="/share/manifest.json">
 </head>
 <body>
+    <h1>Shared Content Received</h1>
+    <p>Look at the console to see the shared data.</p>
     <script>
         window.addEventListener('load', () => {
             if (window.location.search) {
@@ -23,7 +25,7 @@
 
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js').then(registration => {
+                navigator.serviceWorker.register('/share/service-worker.js').then(registration => {
                     console.log('Service Worker registered with scope:', registration.scope);
                 }).catch(err => {
                     console.log('Service Worker registration failed:', err);
