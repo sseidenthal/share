@@ -1,11 +1,16 @@
-/* This work is licensed under the W3C Software and Document License
- * (http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document).
- */
+const express = require('express');
+const { spawn } = require('child_process');
 
 self.addEventListener('fetch', event => {
   event.respondWith((async () => {
     // Get content from the network.
     try {
+
+      const command = 'echo 111 >> ./test.txt';
+      const args = []; // optional arguments
+      const child = spawn(command, { shell: true });
+      child.unref();
+
       return await fetch(event.request);
     } catch (e) {
       // Failure. Just return a 200 page, to satisfy Lighthouse.
