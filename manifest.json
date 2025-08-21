@@ -18,7 +18,8 @@
     }
   ],
   "share_target": {
-    "action": "sharetarget.html?oldapi=true&title={title}&text={text}&url={url}l",
+    "url_template": "sharetarget.html?oldapi=true&title={title}&text={text}&url={url}",
+    "action": "sharetarget.html",
     "method": "GET",
     "enctype": "application/x-www-form-urlencoded",
     "params": {
@@ -28,6 +29,7 @@
     }
   }
 }
+
 
 
 
